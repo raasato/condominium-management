@@ -1,0 +1,36 @@
+:root {
+    /* color variables */
+    --primary--color: #00c7ca;
+    --secondary-color: #00768d;
+    /*--accent-color: */
+    --neutral-color: #f3ead6;
+    --primary-text-color: #1f2927;
+    --secondary-text-color: #f6f9ff;
+
+    /* typography variables */
+    --heading-font: 'bebas neue', sans-serif;
+    --body-font: 'inter', sans-serif;
+}
+
+* {
+    background-color: var(--neutral-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}   
+
+p, a, li {
+    font-family: var(--body-font);
+}
+
+#overview-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    #overview-grid {
+        flex-direction: row;
+    }
+}
