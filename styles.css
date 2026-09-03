@@ -12,7 +12,7 @@
     --body-font: 'inter', sans-serif;
 }
 
-* {
+html {
     background-color: var(--neutral-color);
 }
 
@@ -24,13 +24,96 @@ p, a, li {
     font-family: var(--body-font);
 }
 
+main {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+header {
+        background-image: url('https://placehold.co/800x200');
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+    }
+
+nav, footer {
+    background-color: var(--secondary-color);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+nav li, footer li {
+    list-style: none;
+    margin: 10px;
+}
+nav a, footer a {
+    text-decoration: none;
+    color: var(--secondary-text-color);
+}
+
+nav a:hover, footer a:hover {
+    color: var(--primary-text-color);
+    background-color: var(--primary--color);
+    padding: 5px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    color: var(--secondary-text-color);
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--primary-text-color);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--primary-text-color);
+    text-align: center;
+}
+
 #overview-grid {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+}
+
+.overview-block {
+    background-color: #ffffff;
+    padding: 20px;
+    height: fit-content;
 }
 
 @media screen and (min-width: 768px) {
+    header {
+        background-image: url('https://placehold.co/1200x300');
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+    }
     #overview-grid {
         flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (min-width: 1200px) {
+    header {
+        background-image: url('https://placehold.co/1440x500');
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+    }
+
+    .overview-block {
+        max-width: 550px;
+        margin: 0 auto;
     }
 }
