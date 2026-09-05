@@ -25,11 +25,12 @@ p, a, li {
 }
 
 header {
-    background-image: url('images/hero-replace.jpeg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('images/hero-replace.jpeg');
     background-size: cover;
     background-position: center;
     height: 400px;
 }
+
 main {
     margin: 0 auto;
     max-width: 1200px;
@@ -95,7 +96,7 @@ footer ul {
 h1 {
     font-size: 3rem;
     text-align: center;
-    color: var(--secondary-text-color);
+    color: var(--primary-text-color);
     margin-top: 50px;
 
 }
