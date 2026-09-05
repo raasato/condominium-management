@@ -24,16 +24,16 @@ p, a, li {
     font-family: var(--body-font);
 }
 
+header {
+    background-image: url('images/hero-replace.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
 main {
     margin: 0 auto;
     max-width: 1200px;
 }
-
-header {
-    background-image: url('https://placehold.co/800x200');
-    background-size: cover;
-    background-position: center;
-    }
 
 nav, footer {
     background-color: var(--secondary-color);
@@ -95,7 +95,9 @@ footer ul {
 h1 {
     font-size: 3rem;
     text-align: center;
-    color: var(--primary-text-color);
+    color: var(--secondary-text-color);
+    margin-top: 50px;
+
 }
 
 h2 {
@@ -185,12 +187,6 @@ label {
 }
 
 @media screen and (min-width: 768px) {
-    header {
-        background-image: url('https://placehold.co/1200x300');
-        background-size: cover;
-        background-position: center;
-        height: 300px;
-    }
     #overview-grid {
         flex-direction: row;
         flex-wrap: wrap;
@@ -210,13 +206,6 @@ label {
     }
 }
 @media screen and (min-width: 1200px) {
-    header {
-        background-image: url('https://placehold.co/1440x500');
-        background-size: cover;
-        background-position: center;
-        height: 500px;
-    }
-
     .overview-block {
         max-width: 550px;
         margin: 0 auto;
