@@ -30,20 +30,31 @@ main {
 }
 
 header {
-        background-image: url('https://placehold.co/800x200');
-        background-size: cover;
-        background-position: center;
-        height: 200px;
+    background-image: url('https://placehold.co/800x200');
+    background-size: cover;
+    background-position: center;
     }
 
 nav, footer {
     background-color: var(--secondary-color);
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+}
+
 nav ul {
     display: flex;
     justify-content: space-around;
     margin: 0;
+    margin-right: 20px;
     padding: 0;
 }
 
@@ -56,7 +67,7 @@ nav a, footer a {
     color: var(--secondary-text-color);
 }
 
-nav a:hover, footer a:hover {
+nav li a:hover, footer a:hover {
     color: var(--primary-text-color);
     background-color: var(--primary--color);
     padding: 5px;
@@ -64,8 +75,21 @@ nav a:hover, footer a:hover {
 
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     color: var(--secondary-text-color);
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer h2 {
+    color: var(--secondary-text-color);
+    margin: 10px;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -80,6 +104,11 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
 #overview-grid {
     display: flex;
     flex-direction: column;
@@ -88,8 +117,53 @@ h2 {
 
 .overview-block {
     background-color: #ffffff;
-    padding: 20px;
     height: fit-content;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+label span {
+    color: red;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-around;
+}   
+
+.form-block {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+#submit, #reset {
+    background-color: var(--primary--color);
+    color: var(--primary-text-color);
+    font-size: 16px;
+    padding: 10px 25px;;
 }
 
 @media screen and (min-width: 768px) {
@@ -102,6 +176,19 @@ h2 {
     #overview-grid {
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .form-column-block {
+        display: flex;
+        gap: 10px;
+        align-items: flex-end;
+    }
+
+    .form-block {
+        width: stretch;
+        display: flex;
+        flex-direction: column;
     }
 }
 @media screen and (min-width: 1200px) {
@@ -115,5 +202,9 @@ h2 {
     .overview-block {
         max-width: 550px;
         margin: 0 auto;
+    }
+
+    form {
+        min-width: 900px;
     }
 }

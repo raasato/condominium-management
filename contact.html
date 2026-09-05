@@ -10,6 +10,7 @@
     <body>
         <header>
             <nav>
+                <a href="index.html"><img src="images/RCP-logo.png" alt="Royal Capitol Plaza Logo"></a>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -24,28 +25,43 @@
             <h2>Contact Royal Capitol Plaza</h2>
             <p>If you have any questions or concerns, please don't hesitate to reach out to us. We're here to help!</p>
             <form action="submit.php" method="post">
-                <label for="fName">First Name<span>*</span>:</label>
-                <input type="text" id="fName" name="fName" required>
-
-                <label for="lName">Last Name<span>*</span>:</label>
-                <input type="text" id="lName" name="lName" required>
-
-                <label for="email">Email<span>*</span>:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone">Phone Number<span>*</span>:</label>
-                <input type="tel" id="phone" name="phone" required>
-
-                <label for="unit">Unit Number: (Required for residents) Type none if not applicable.</label>
-                <input type="text" id="unit" name="unit">
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+                <div class="form-column-block">
+                    <div class="form-block">
+                        <label for="fName">First Name:<span>*</span></label>
+                        <input type="text" id="fName" name="fName" required>
+                    </div>
+                    <div class="form-block">
+                        <label for="lName">Last Name:<span>*</span></label>
+                        <input type="text" id="lName" name="lName" required>
+                    </div>
+                </div>
+                <div class="form-block">
+                    <label for="email">Email:<span>*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-column-block">
+                    <div class="form-block">
+                        <label for="phone">Phone Number:<span>*</span></label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-block">
+                        <label for="unit">Unit Number: (Required for residents) Type none if not applicable.</label>
+                        <input type="text" id="unit" name="unit">
+                    </div>
+                </div>
+                <div class="form-block">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form-buttons">
+                    <input type="submit" value="Submit" id="submit">
+                    <input type="reset" value="Reset" id="reset">
+                </div>
             </form>
         </main>
     </body>
     <footer>
-        <p>&copy; 2026 Royal Capitol Plaza. All rights reserved.</p>
+        <h2>Royal Capitol Plaza</h2>
         <ul>
             <li><a href="privacy-policy.html">Privacy Policy</a></li>
             <li><a href="terms-of-service.html">Terms of Service</a></li>
@@ -53,5 +69,6 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
+        <p>&copy; 2026 Royal Capitol Plaza. All rights reserved.</p>
     </footer>
 </html>
