@@ -121,6 +121,7 @@ h3 {
 .overview-block {
     background-color: #ffffff;
     height: fit-content;
+    padding: 10px;
 }
 
 img {
@@ -163,7 +164,7 @@ label {
     margin-top: 10px;
 }
 
-#submit, #reset, #create {
+#submit, #reset, #create, #floor-plans, #amenities {
     background-color: var(--primary--color);
     color: var(--primary-text-color);
     font-size: 16px;
@@ -185,6 +186,27 @@ label {
     border: none;
     border-radius: 5px;
     width: 100%;
+}
+
+#floor-plans, #amenities {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+#floor-plans a, #amenities a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+
+#floor-plans:hover, #amenities:hover {
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
 }
 
 @media screen and (min-width: 768px) {
