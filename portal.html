@@ -6,14 +6,24 @@
         <title>Condominium Management Platform</title>
         <meta name="description" content="A platform for managing condominiums efficiently.">
         <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
     </head>
     <body>
         <header>
             <nav>
                 <a href="index.html"><img src="images/RCP-logo.png" alt="Royal Capitol Plaza Logo"></a>
-                <ul>
+                <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul id="primary-navigation">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li>
+                        <a href="about.html">About</a>
+                        <ul class="submenu">
+                            <li><a href="floor-plans.html">Floor Plans</a></li>
+                            <li><a href="amenities.html">Amenities</a></li>
+                        </ul>
+                    </li>
                     <li><a href="community-overview.html">Community Overview</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <button id="portal"><a href="portal.html">Resident Portal</a></button>
@@ -39,6 +49,9 @@
                         <input type="submit" id="create" value="Create Account">
                     </div>
                 </form>
+                <div class="login-description">
+                    <p>Welcome to the Royal Capitol Plaza Resident Portal. This platform allows residents to manage their condominium accounts, pay bills, submit maintenance requests, and stay updated with community news. Please log in with your credentials or create a new account to access the portal features.</p>
+                </div>
             </section>
         </main>
     </body>

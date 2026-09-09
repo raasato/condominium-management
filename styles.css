@@ -43,6 +43,30 @@ nav, footer {
 nav {
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--secondary-text-color);
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1;
+    margin: 10px 20px 10px 10px;
+    padding: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    background-color: currentColor;
+    height: 3px;
+    margin: 5px 0;
+    width: 30px;
 }
 
 nav img {
@@ -52,17 +76,55 @@ nav img {
 }
 
 nav ul {
-    display: flex;
+    background-color: var(--secondary-color);
+    display: none;
     justify-content: space-around;
     margin: 0;
     margin-right: 20px;
     padding: 0;
 }
 
+nav ul.is-open {
+    display: flex;
+    flex-direction: column;
+    inset: 0;
+    justify-content: center;
+    margin: 0;
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+}
+
 nav li, footer li {
     list-style: none;
     margin: 10px;
+    position: relative;
 }
+
+/* Submenu styling for mobile (hidden by default) */
+.submenu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    position: static;
+    margin: 0;
+    padding: 0;
+}
+
+/* Show submenu on mobile when parent has is-open class */
+li.submenu-open .submenu {
+    display: flex;
+}
+
+.submenu li {
+    margin: 0;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px;
+}
+
 nav a, footer a {
     text-decoration: none;
     color: var(--secondary-text-color);
@@ -139,6 +201,19 @@ img {
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+.image-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.image-carousel img {
+    flex-shrink: 0;
+    width: 80%;
+    height: auto;
 }
 
 form {
@@ -219,6 +294,37 @@ label {
 }
 
 @media screen and (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    /* Show submenu on hover on desktop */
+    nav li:hover .submenu {
+        display: flex;
+    }
+
+    /* Submenu positioning and styling for desktop */
+    .submenu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+    }
+
+    nav ul.is-open {
+        flex-direction: row;
+        inset: auto;
+        justify-content: space-around;
+        margin: 0;
+        margin-right: 20px;
+        position: static;
+        text-align: left;
+    }
+
     #overview-grid {
         flex-direction: row;
         flex-wrap: wrap;
