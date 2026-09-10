@@ -260,7 +260,6 @@ label {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    max-width: 600px;
     margin: 0 auto;
     background-color: var(--secondary-color);
     color: var(--secondary-text-color);
@@ -378,6 +377,10 @@ label {
         gap: 10px;
         padding: 20px;
     }
+
+    .login-description {
+        max-width: 350px;
+    }
 }
 @media screen and (min-width: 1200px) {
     .overview-block {
@@ -387,6 +390,15 @@ label {
 
     form {
         min-width: 900px;
+    }
+
+    #login form {
+        min-width: 0;
+        -width: 100%;
+    }
+
+    .login-description {
+        max-width: 600px;
     }
 
     footer {
