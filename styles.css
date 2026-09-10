@@ -224,7 +224,7 @@ form {
     margin: 0 auto;
 }
 
-input, textarea {
+input, select, textarea {
     padding: 10px;
     border: none;
     border-radius: 5px;

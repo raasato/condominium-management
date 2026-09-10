@@ -26,8 +26,8 @@
                     </li>
                     <li><a href="community-overview.html">Community Overview</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <button id="portal"><a href="portal.html">Resident Portal</a></button>
-                    <button id="portal"><a href="portal.html">Resident Portal</a></button>
+                    <li><a id="portal" href="portal.html">Resident Portal</a></li>
+                    <li><a id="portal" href="portal.html">Staff Portal</a></li>
                 </ul>
             </nav>
             <!--Add hero image-->
@@ -51,6 +51,15 @@
                     <label for="email">Email:<span>*</span></label>
                     <input type="email" id="email" name="email" required>
                 </div>
+                <div class="form-block">
+                    <label for="request-type">What can we help you with?<span>*</span></label>
+                    <select id="request-type" name="request-type" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="maintenance-request">Maintenance request</option>
+                        <option value="amenities-reservation">Amenities reservation</option>
+                        <option value="general-question">General question</option>
+                    </select>
+                </div>
                 <div class="form-column-block">
                     <div class="form-block">
                         <label for="phone">Phone Number:<span>*</span></label>
@@ -71,7 +80,6 @@
                 </div>
             </form>
         </main>
-    </body>
     <footer>
         <h2>Royal Capitol Plaza</h2>
         <ul>
@@ -83,4 +91,5 @@
         </ul>
         <p>&copy; 2026 Royal Capitol Plaza. All rights reserved.</p>
     </footer>
+    </body>
 </html>
