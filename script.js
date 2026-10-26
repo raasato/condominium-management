@@ -34,20 +34,10 @@ if (menuToggle && navigationMenu) {
 		// event.target.closest('a') finds the nearest link element
 		const clickedLink = event.target.closest('a');
 		if (clickedLink) {
-			// Check if the link has a submenu (if its parent li has a submenu child)
-			const parentLi = clickedLink.closest('li');
-			const hasSubmenu = parentLi && parentLi.querySelector('.submenu');
-			
-			// If there's a submenu and we're on mobile, toggle it instead of closing the menu
-			if (hasSubmenu && window.innerWidth < 768) {
-				event.preventDefault();
-				parentLi.classList.toggle('submenu-open');
-			} else {
-				// Otherwise, close the main menu when a regular link is clicked
-				navigationMenu.classList.remove('is-open');
-				menuToggle.setAttribute('aria-expanded', 'false');
-				menuToggle.setAttribute('aria-label', 'Open navigation menu');
-			}
+			// Allow every anchor, including About, to navigate normally.
+			navigationMenu.classList.remove('is-open');
+			menuToggle.setAttribute('aria-expanded', 'false');
+			menuToggle.setAttribute('aria-label', 'Open navigation menu');
 		}
 	});
 }
